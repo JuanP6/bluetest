@@ -24,9 +24,9 @@ const Home = props => {
 
   const previousPage = (e) => {
     e.preventDefault();
-    const newOffset = listOffset - PAGE_OFFSET - 1;
     if (searchTerm.length) {
-      addGifs({ searchTerm,  offset: newOffset }, actionTypes.ADD_GIFS);
+      const newOffset = listOffset - PAGE_OFFSET - 1
+      addGifs({ searchTerm, offset: newOffset > -1 ? newOffset : 0, }, actionTypes.ADD_GIFS)
     }
   }
 
@@ -57,7 +57,6 @@ const Home = props => {
         addGifs({ searchTerm, offset: newOffset > -1 ? newOffset : 0, }, actionTypes.ADD_GIFS)
       } else {
         if (gifIndex >= 0) {
-          console.log(gifIndex)
           selectGif({ gifIndex }, actionTypes.SELECT_GIF);
         } else {
           setLoadedImage(true)

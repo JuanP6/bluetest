@@ -19,7 +19,6 @@ const gifsReducer = (state = initialState, action) => {
           const index = Lodash.get(action, ['selectedIndex'], 0);
           const selectedGif = (index == PAGE_OFFSET) ? 0 : PAGE_OFFSET
           
-          console.log((index === 24))
           return {
             ...state,
             gifsList: gifPayload,

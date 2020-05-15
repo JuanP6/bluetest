@@ -16,10 +16,14 @@ const addGifs = ({ searchTerm, offset, selectedIndex = 0 }, type) => {
             });
           })
           .catch((err) => {
-            // ERROR HANDLING
-            /* 
             switch (error.response.status) {
-            } */
+              case 400:
+              alert('BAD REQUEST');
+                break;
+              default:
+              alert('ERROR REQUEST');
+                break;
+            }
           });
       };
 };
