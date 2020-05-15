@@ -1,0 +1,40 @@
+  .card {
+    margin: 1rem 0.5rem;
+    flex-basis: calc(20% - 1rem);
+    max-width: calc(20% - 1rem);
+    padding: 0;
+    height: 150px;
+    text-align: left;
+    color: inherit;
+    text-decoration: none;
+    border: 1px solid #eaeaea;
+    border-radius: 0px;
+    transition: color 0.15s ease, border-color 0.15s ease;
+    overflow: hidden;
+    display:flex;
+    justify-content:center; /* horizontally center */
+    align-items:center;    /* vertically center */
+  }
+
+  .card:hover,
+  .card:focus,
+  .card:active {
+    color: red;
+    border-color: red;
+  }
+
+  .card h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.5rem;
+  }
+
+  .card p {
+    margin: 0;
+    font-size: 1.25rem;
+    line-height: 1.5;
+  } 
+
+  .image {
+    max-height:100%;
+  } 
+
